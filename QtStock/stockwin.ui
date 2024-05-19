@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StockWin</class>
+ <widget class="QMainWindow" name="StockWin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1600</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>股票分析程序 by 2022201480</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <widget class="QTabWidget" name="tabFunctions">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="tabsClosable">
+       <bool>false</bool>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+      <property name="tabBarAutoHide">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="TabWelcome">
+       <attribute name="title">
+        <string>欢迎</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <widget class="QTextBrowser" name="WelcomeTextBrowser">
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;    本项目是&lt;/span&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;2022201480&lt;/span&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;的&lt;/span&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;中国人民大学&lt;/span&gt;&lt;span style=&quot; font-family:'Times New Roman','serif'; font-size:16pt; font-weight:600;&quot;&gt;2022-2023学年春季学期&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt; font-weight:600;&quot;&gt;《程序设计&lt;/span&gt;&lt;span style=&quot; font-family:'Times New Roman','serif'; font-size:16pt; font-weight:600;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt; font-weight:600;&quot;&gt;》大作业&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;    以下是本项目的简要使用说明：&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;    该程序的窗口由三大部分组成，分别是工具栏、控制台和标签页组。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;    工具栏用于打开和处理文件，可以浮动或者停靠在窗口两边。控制台可以选择股票代码、年月，还可以查看文件打开状态。标签页组用于实现各种对股票数据的处理，标签页可以拖动来改变顺序。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;    &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;    在进行任何标签页的处理之前，需要先在工具栏中选择“文件”一栏，打开一个股票数据文件。若股票数据文件处于未排序的状态，可以选择“打开股票数据文件并排序”。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;    然后打开该股票数据文件对应的索引文件。若没有索引文件，则可以选择“为打开的股票数据文件创建索引文件”。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt; font-weight:600;&quot;&gt;请注意，打开索引文件后，索引数据会全部读入内存，但股票数据文件数据量大，并不会被读入内存，只有其绝对路径在内存中，因此不要改变已经打开的股票数据文件的绝对路径，否则需要重新打开该股票数据文件。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;    打开股票数据文件和索引文件后，可以在控制台的控制框中显示打开的文件的绝对路径。此后可在控制台中选择股票代码和年月，组合框控件可以选择或者输入。将鼠标指针置于组合框，鼠标滚轮可以快速选择。&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt; font-weight:600;&quot;&gt;每次更改后需要点击确认，才会把股票代码和对应月份的数据读入内存，并显示在控制台的状态框中，完成更改。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;    此后便可进行右侧标签页组的处理，以下三个作图功能由第三方库qcustomplot实现。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;    一、股票数据可视化&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;    点击按钮生成K线图和柱状图后，该标签页将会按照当前股票文件和年月创建K线图和交易量柱状图。更改股票代码或年月后会再次点击按钮，将会生成新的图像，而原本生成的K线图和柱状图也会保留在图上。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;    二、相关系数热力图&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;    其实该功能只需打开了股票数据文件和索引文件后便可实现，并不需要选定股票代码和年月。输入年月（格式为yyyyMM，如202306），在组合框中选择十个股票代码再按生成按钮即可。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;    三、模拟股票价格变动&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;    点击按钮后将会按照当前股票文件和年月生成下个月份的预测价格折线图和原本价格折线图，并显示协方差。每次更改股票代码或年月后会再次生成新的图像，原本的图像不会保留。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;    四、真实股票市场价格预测&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;    这其实是空白标签页，因为还没有做QwQ&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'宋体'; font-size:16pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;    关于股票数据文件和索引文件的格式：&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;    两者都为csv格式，数据之间用逗号分隔。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;    数据文件由表头（首行）和具体一行行的股票数据构成。股票数据第一行为表头，&lt;/span&gt;&lt;span style=&quot; font-family:'Times New Roman','serif'; font-size:16pt;&quot;&gt;ts_code&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;表示股票代码，&lt;/span&gt;&lt;span style=&quot; font-family:'Times New Roman','serif'; font-size:16pt;&quot;&gt;trade_date&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;表示交易日期，&lt;/span&gt;&lt;span style=&quot; font-family:'Times New Roman','serif'; font-size:16pt;&quot;&gt;open&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;表示开盘价，&lt;/span&gt;&lt;span style=&quot; font-family:'Times New Roman','serif'; font-size:16pt;&quot;&gt;high&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;表示最高价，&lt;/span&gt;&lt;span style=&quot; font-family:'Times New Roman','serif'; font-size:16pt;&quot;&gt;low&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;表示最低价，&lt;/span&gt;&lt;span style=&quot; font-family:'Times New Roman','serif'; font-size:16pt;&quot;&gt;close&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;表示收盘价，&lt;/span&gt;&lt;span style=&quot; font-family:'Times New Roman','serif'; font-size:16pt;&quot;&gt;pre_close&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;表示临近收盘价，&lt;/span&gt;&lt;span style=&quot; font-family:'Times New Roman','serif'; font-size:16pt;&quot;&gt;change&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;表示涨跌幅，&lt;/span&gt;&lt;span style=&quot; font-family:'Times New Roman','serif'; font-size:16pt;&quot;&gt;pct_chg&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;表示涨跌百分比，&lt;/span&gt;&lt;span style=&quot; font-family:'Times New Roman','serif'; font-size:16pt;&quot;&gt;vol&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;表示交易量，&lt;/span&gt;&lt;span style=&quot; font-family:'Times New Roman','serif'; font-size:16pt;&quot;&gt;amount&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;表示交易金额。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;    示例：&amp;quot;000026.SZ,20200102,11.26,11.52,11.02,11.31,11.09,0.22,1.9838,271761.56,306711.28&amp;quot;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;    索引文件的由一行行的数据构成，比如：&amp;quot;000026.SZ,202008,10878&amp;quot;。分别代表股票代码、年月、在股票数据文件中的偏移量。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:16pt; font-weight:600;&quot;&gt;本程序将无法处理不符合上述格式的文件。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="TabFinancialChart">
+       <attribute name="title">
+        <string>股票数据可视化</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QCustomPlot" name="FinancialChart" native="true"/>
+        </item>
+        <item>
+         <widget class="QWidget" name="CreateFinancialChartLayoutWigdet" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <spacer name="CreateFinancialChartButtonLeftHorizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="CreateFinancialChartButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>生成K线图和柱状图</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="CreateFinancialChartButtonRightHorizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="TabPearsonCorrelationMap">
+       <attribute name="title">
+        <string>相关系数热力图</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QWidget" name="MapInfoLayoutWidget" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QWidget" name="MapCurrentMonthInfoWidgetLayout" native="true">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <widget class="QLabel" name="MapCurrentMonthInfo">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;选择年月：&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="MapMonthInputLineEdit">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="placeholderText">
+                 <string>（格式：yyyyMM）</string>
+                </property>
+                <property name="clearButtonEnabled">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="ChosenInfoLabel">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;请选择10个股票代码&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="ComboBoxLayout" native="true">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <layout class="QGridLayout" name="gridLayout">
+              <item row="4" column="1">
+               <widget class="QComboBox" name="ComboBox8">
+                <property name="editable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QComboBox" name="ComboBox1">
+                <property name="editable">
+                 <bool>true</bool>
+                </property>
+                <property name="frame">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QComboBox" name="ComboBox10">
+                <property name="editable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QComboBox" name="ComboBox4">
+                <property name="editable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QComboBox" name="ComboBox2">
+                <property name="editable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QComboBox" name="ComboBox5">
+                <property name="editable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QComboBox" name="ComboBox9">
+                <property name="editable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QComboBox" name="ComboBox7">
+                <property name="editable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QComboBox" name="ComboBox6">
+                <property name="editable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QComboBox" name="ComboBox3">
+                <property name="editable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="MapButtonsLayoutWigdet" native="true">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <item>
+               <widget class="QPushButton" name="MapConfirmButton">
+                <property name="text">
+                 <string>确认</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="MapClearButton">
+                <property name="text">
+                 <string>清空</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="WrongInfoLabel">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;备注：&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;相关系数为-1.01意为两支股票&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;在选定月份的交易日数量不同&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;无法计算皮尔森相关系数&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="MapUnderButtonsVerticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCustomPlot" name="PearsonCorrelationMap" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="TabPrediction">
+       <attribute name="title">
+        <string>模拟价格变动</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QCustomPlot" name="SimulationGraph" native="true"/>
+        </item>
+        <item>
+         <widget class="QWidget" name="CreateSimulationGraphLayoutWidget" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <spacer name="CreateSimulationGraphButtonLeftHorizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="CreateSimulationGraphButton">
+             <property name="text">
+              <string>生成多线图</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="CreateSimulationGraphButtonRightHorizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="TabRealPrediction">
+       <attribute name="title">
+        <string>真实股票市场价格预测</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="MenuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1600</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="MenuFile">
+    <property name="title">
+     <string>文件(&amp;F)</string>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>false</bool>
+    </property>
+    <addaction name="actionOpenStockFile"/>
+    <addaction name="actionOpenAndSortStockFile"/>
+   </widget>
+   <widget class="QMenu" name="MenuIndex">
+    <property name="title">
+     <string>索引(&amp;I)</string>
+    </property>
+    <addaction name="actionOpenIndexFile"/>
+    <addaction name="actionCreateIndexFile"/>
+   </widget>
+   <addaction name="MenuFile"/>
+   <addaction name="MenuIndex"/>
+  </widget>
+  <widget class="QStatusBar" name="StatusBar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QDockWidget" name="ConsoleDockWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>240</width>
+     <height>352</height>
+    </size>
+   </property>
+   <property name="features">
+    <set>QDockWidget::DockWidgetFloatable|QDockWidget::DockWidgetMovable</set>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>控制台</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <spacer name="AboveInfoVerticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Minimum</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>30</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QGridLayout" name="InfoGridLayout">
+       <item row="1" column="0">
+        <widget class="QLabel" name="ConsoleMonthLabel">
+         <property name="text">
+          <string>交易年月：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="ConsoleStockCodeLabel">
+         <property name="text">
+          <string>股票代码：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="ConsoleStockCodeComboBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QComboBox" name="ConsoleMonthComboBox">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="AboveButtonsVerticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Minimum</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>10</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="ButtonsVerticalLayout">
+       <item>
+        <widget class="QPushButton" name="ConfirmButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>确定</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="ClearButton">
+         <property name="text">
+          <string>清空</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="Line" name="UnderButtonsHorizontalLine">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="StatusLabel">
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="text">
+        <string>当前状态：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextBrowser" name="StatusTextBrowser">
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="ConsoleInfo">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;控制台中输入的股票代码和交易年月用于&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;“可视化”&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;和&lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;“预测价格变动”&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="UnderButtonsVerticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionOpenAndSortStockFile">
+   <property name="text">
+    <string>打开股票数据文件并排序(&amp;S)</string>
+   </property>
+  </action>
+  <action name="actionCreateIndexFile">
+   <property name="text">
+    <string>为打开的股票数据文件创建索引文件(&amp;C)</string>
+   </property>
+  </action>
+  <action name="actionOpenIndexFile">
+   <property name="text">
+    <string>打开索引文件(&amp;O)</string>
+   </property>
+  </action>
+  <action name="actionOpenStockFile">
+   <property name="text">
+    <string>打开股票数据文件(&amp;O)</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header location="global">qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
